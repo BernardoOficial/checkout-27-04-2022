@@ -1,0 +1,50 @@
+.games__form-container {
+
+}
+
+.games__form {
+    max-width: 800px;
+}
+
+.container-fields {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.field {
+    flex: 1 1 47%;
+    max-width: 47%;
+    margin: 10px 10px;
+}
+
+.label {
+    border-radius: 30px 30px 0px 0px;
+    background-color: #a88f6b;
+    padding: 12px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.input {
+    border-radius: 0px 0px 30px 30px;
+    background-color: #dbcfbf;
+    padding: 12px 20px;
+    color: #323232;
+    border: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.input::placeholder {
+    font-weight: bold;
+    color: #323232;
+}
+
+.input.select {
+    font-weight: bold;
+}

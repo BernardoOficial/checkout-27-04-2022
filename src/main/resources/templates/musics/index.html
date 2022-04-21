@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Musics</title>
+
+<link
+	href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700 & display=swap"
+	rel="stylesheet" />
+
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="/list-musics.css" />
+</head>
+
+<body>
+	<div class="musics__container">
+		<h1 class="musics__title">Musics</h1>
+
+		<div class="musics__list-container">
+			<ul class="musics__list" th:each="music : ${musics}">
+				<li class="musics__item"><span> #<span class="id"
+						th:text="${music.getId()}"></span>
+				</span>
+					<p class="title" th:text="${music.getName()}">Hear Me Now</p>
+					<p class="artist" th:text="${music.getArtist()}">Alok</p>
+					<p class="music-style" th:text="${music.getMusicStyle()}">
+						eletronic</p>
+
+					<div class="block-info-container">
+						<p class="block-info year" th:text="${music.getReleaseYear()}">
+							2022</p>
+						<p class="block-info duration" th:text="${music.getDuration()}">
+							20min</p>
+					</div></li>
+			</ul>
+			
+			<div class="button-container">
+				<a href="/musics/criar" class="button">criar uma música</a>
+			</div>
+			<div class="button-container">
+				<a href="/games/criar" class="button">criar um game</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

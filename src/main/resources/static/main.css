@@ -1,0 +1,59 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body, input, select, button {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+input, button {
+	background-color: #ffffff;
+	border: 1px solid #323232;
+	outline: 0;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+.games__container, .musics__container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 50px 0px;
+	padding: 0px 20px;
+}
+
+.games__title, .musics__title {
+	font-size: 40px;
+	color: #a88f6b;
+	margin-bottom: 50px;
+}
+
+.button-container {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.button {
+	border: 0px;
+	border-radius: 30px;
+	padding: 12px 45px;
+	background-color: #a88f6b;
+	color: #ffffff;
+	font-weight: bold;
+	margin: 0px auto;
+	display: inline-block;
+	transition: 0.2s ease-in;
+}
+
+.button:hover {
+	transform: scale(0.99);
+	opacity: 0.8;
+}

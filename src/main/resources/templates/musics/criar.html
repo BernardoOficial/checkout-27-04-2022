@@ -1,0 +1,79 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Musics</title>
+
+<link
+	href="https: //fonts.googleapis.com/css2? family= Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700 & display=swap"
+	rel="stylesheet" />
+
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="/create-music.css" />
+</head>
+
+<body>
+	<div class="musics__container">
+		<h1 class="musics__title">Crie a sua música</h1>
+
+		<div class="musics__form-container">
+			<form class="musics__form" th:object="${musicDTO}" action="/musics"
+				method="POST">
+				<div class="container-fields">
+					<div class="field">
+						<label class="label" for="name">nome da música</label> <input
+							th:field="*{name}" th:errorclass="is-invalid" class="input"
+							type="text" name="name" id="name" placeholder="hear me now" />
+						<div class="invalid-feedback" th:errors="*{name}"></div>
+					</div>
+
+					<div class="field">
+						<label class="label" for="artist">artist</label> <input
+							th:field="*{artist}" th:errorclass="is-invalid" class="input"
+							type="text" name="artist" id="artist" placeholder="alok" />
+						<div class="invalid-feedback" th:errors="*{artist}"></div>
+					</div>
+
+					<div class="field">
+						<label class="label" for="music-style">estilo músical</label> <input
+							th:field="*{musicStyle}" th:errorclass="is-invalid" class="input"
+							type="text" name="music-style" id="music-style"
+							placeholder="eletronic" />
+							<div class="invalid-feedback" th:errors="*{musicStyle}"></div>
+					</div>
+
+					<div class="field">
+						<label class="label" for="duration">duration</label> <input
+							th:field="*{duration}" th:errorclass="is-invalid" class="input"
+							type="text" name="duration" id="duration" placeholder="20" />
+							<div class="invalid-feedback" th:errors="*{duration}"></div>
+					</div>
+
+					<div class="field">
+						<label class="label" for="year">ano</label> <select
+							class="input select" name="year" id="year"
+							th:field="*{releaseYear}" th:errorclass="is-invalid">
+							<option value="2022">2022</option>
+							<option value="2021">2021</option>
+							<option value="2020">2020</option>
+							<option value="2019">2019</option>
+						</select>
+						<div class="invalid-feedback" th:errors="*{releaseYear}"></div>
+					</div>
+				</div>
+
+				<div class="button-container">
+					<button class="button" type="submit">criar música</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.musics__list-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0px auto 50px;
+}
+
+.musics__list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.musics__item {
+    flex: 1 1 47%;
+    max-width: 47%;
+    margin: 10px;
+    padding: 20px 20px;
+    background-color: #dbcfbf;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.id {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.artist {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.music-style {
+    font-size: 14px;
+}
+
+.release-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.block-info-container {
+    margin-top: 15px;
+}
+
+.block-info {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #000000;
+    padding: 5px 15px;
+    color: #ffffff;
+    margin: 0px 2px;
+}
+
+.year {
+    background-color: #000000;
+}
+
+.duration {
+    background-color: #dd1616;
+    color: #ffffff;
+}
