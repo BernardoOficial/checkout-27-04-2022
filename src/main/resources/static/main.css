@@ -42,14 +42,7 @@ a, button {
 }
 
 .button {
-	border: 0px;
-	border-radius: 30px;
-	padding: 12px 45px;
-	background-color: #a88f6b;
-	color: #ffffff;
-	font-weight: bold;
-	margin: 0px auto;
-	display: inline-block;
+	
 	transition: 0.2s ease-in;
 }
 

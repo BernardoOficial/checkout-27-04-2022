@@ -4,8 +4,41 @@
 <head>
 <meta charset="utf-8">
 <title>Criar usuário</title>
+
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="/user.css" />
+
 </head>
 <body>
 	<p>Criar usuário</p>
+	
+	<form th:object="${userDTO}" action="/create-user" method="POST"
+		class="games__form">
+		
+		<div class="container-fields">
+		
+			<div class="field">
+				<label class="label" for="username">username</label> <input
+					th:field="*{username}" th:errorclass="is-invalid" class="input"
+					type="text" id="username" placeholder="seu username" />
+				<div class="invalid-feedback" th:errors="*{username}"></div>
+			</div>
+
+			<div class="field">
+				<label class="label" for="password">senha</label> <input
+					th:field="*{password}" th:errorclass="is-invalid"
+					class="input" type="text" name="password" id="password"
+					placeholder="sua senha" />
+				<div class="invalid-feedback" th:errors="*{password}"></div>
+			</div>
+			
+		</div>
+
+		<div class="button-container">
+			<button class="button" type="submit">criar conta</button>
+		</div>
+		
+	</form>
+	
 </body>
 </html>

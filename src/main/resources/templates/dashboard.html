@@ -4,8 +4,16 @@
 <head>
 <meta charset="utf-8">
 <title>Dashboard</title>
+
+<link rel="stylesheet" href="/main.css" />
+<link rel="stylesheet" href="/user.css" />
+
 </head>
 <body>
 	<p>Dashboard</p>
+	
+
+	<p>Bem vindo <span class="title" th:text="${user.getUsername()}">oi</span></p>
+			
 </body>
 </html>
