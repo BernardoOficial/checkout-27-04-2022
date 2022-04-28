@@ -5,15 +5,19 @@
 <meta charset="utf-8">
 <title>Dashboard</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/main.css" />
 <link rel="stylesheet" href="/user.css" />
 
 </head>
 <body>
-	<p>Dashboard</p>
 	
+	<p>Dashboard</p>
 
-	<p>Bem vindo <span class="title" th:text="${user.getUsername()}">oi</span></p>
+	<span>Bem vindo, <span class="title" th:text="${user.getUsername()}">meu amigo</span>!! 😉😉</span>
 			
 </body>
 </html>

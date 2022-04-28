@@ -5,38 +5,35 @@
 <meta charset="utf-8">
 <title>Login</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="/main.css" />
 <link rel="stylesheet" href="/user.css" />
 
 </head>
 <body>
-	<p>Login</p>
+	
 	
 	<form th:object="${userDTO}" action="/login" method="POST"
 		class="games__form">
 		
-		<div class="container-fields">
+		<p>Login</p>
 		
-			<div class="field">
-				<label class="label" for="username">username</label> <input
+		
+		<input
 					th:field="*{username}" th:errorclass="is-invalid" class="input"
 					type="text" id="username" placeholder="seu username" />
 				<div class="invalid-feedback" th:errors="*{username}"></div>
-			</div>
-
-			<div class="field">
-				<label class="label" for="password">senha</label> <input
+		<input
 					th:field="*{password}" th:errorclass="is-invalid"
 					class="input" type="text" name="password" id="password"
 					placeholder="sua senha" />
 				<div class="invalid-feedback" th:errors="*{password}"></div>
-			</div>
-			
-		</div>
 
-		<div class="button-container">
-			<button class="button" type="submit">login</button>
-		</div>
+		<button class="button" type="submit">login</button>
+		<a href="/login" class="button" type="submit">fazer conta</a>
 		
 	</form>
 	
